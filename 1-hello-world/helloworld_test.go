@@ -1,15 +1,10 @@
-package helloworld_test
+package helloworld
 
-import (
-	"testing"
-
-	. "github.com/vivaldy22/go-unit-test/1-hello-world"
-)
+import "testing"
 
 func TestHelloWorld(t *testing.T) {
-	actual := HelloWorld()
-	if actual != "Hello World" {
-		panic("Actual result is not Hello World")
+	hasil := HelloWorld()
+	if hasil != "Hello Enigma" {
+		panic("hasil tidak mengeluarkan Hello World")
 	}
 }
-
