@@ -19,8 +19,11 @@ func (r *repository) GetAll() (users []User, err error) {
 	return
 }
 
-func (r *repository) GetByID(id int64) (user User, err error) {
-	err = r.db.First(&user, id).Error
+func (r *repository) GetByID(paramID int64) (user User, err error) {
+	err = r.db.
+		Where("id = ?", paramID).
+		First(&user).
+		Error // SELECT * FROM user WHERE id = paramID AND status = paramStatus
 	return
 }
 

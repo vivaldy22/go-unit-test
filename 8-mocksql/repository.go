@@ -1,7 +1,7 @@
 package mocksql
 
 type User struct {
-	ID    int64 `gorm:"primaryKey;autoIncrement"`
+	ID    int64 `gorm:"primaryKey;autoIncrement"` //struct tag gorm
 	Name  string
 	Age   int64
 	Email string
